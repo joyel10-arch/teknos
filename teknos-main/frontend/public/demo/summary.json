@@ -1,0 +1,18 @@
+{
+  "video_id": "uploaded",
+  "duration_seconds": 10.043376710043377,
+  "fps": 29.97,
+  "resolution": {
+    "width": 640,
+    "height": 360
+  },
+  "valid_tracked_persons": 55,
+  "raw_track_ids": 111,
+  "event_counts_by_severity": {
+    "high": 5
+  },
+  "processing_info": {
+    "model_name": "YOLOv8",
+    "processing_fps": 11.72
+  }
+}

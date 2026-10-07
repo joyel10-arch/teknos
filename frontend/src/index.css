@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@theme {
+  /* Surface palette - dark navy/charcoal */
+  --color-surface: #0f131d;
+  --color-surface-dim: #0f131d;
+  --color-surface-container-lowest: #0a0e18;
+  --color-surface-container-low: #171b26;
+  --color-surface-container: #1c1f2a;
+  --color-surface-container-high: #262a35;
+  --color-surface-container-highest: #313540;
+  --color-surface-bright: #353944;
+
+  /* Primary - Blue accent */
+  --color-primary: #adc6ff;
+  --color-primary-container: #4d8eff;
+  --color-primary-fixed: #d8e2ff;
+  --color-primary-fixed-dim: #adc6ff;
+  --color-on-primary: #002e6a;
+  --color-on-primary-container: #00285d;
+  --color-on-primary-fixed: #001a42;
+
+  /* Secondary - Cyan accent */
+  --color-secondary: #4cd7f6;
+  --color-secondary-container: #03b5d3;
+  --color-secondary-fixed: #acedff;
+  --color-on-secondary: #003640;
+  --color-on-secondary-container: #00424e;
+
+  /* Tertiary - Green/Normal */
+  --color-tertiary: #4edea3;
+  --color-tertiary-container: #00a572;
+  --color-tertiary-fixed: #6ffbbe;
+  --color-on-tertiary: #003824;
+  --color-on-tertiary-container: #00311f;
+
+  /* Error - Red/Abnormal */
+  --color-error: #ffb4ab;
+  --color-error-container: #93000a;
+  --color-on-error: #690005;
+  --color-on-error-container: #ffdad6;
+
+  /* Text colors */
+  --color-on-surface: #dfe2f1;
+  --color-on-surface-variant: #c2c6d6;
+  --color-outline: #8c909f;
+  --color-outline-variant: #424754;
+
+  --color-inverse-surface: #dfe2f1;
+  --color-inverse-on-surface: #2c303b;
+  --color-inverse-primary: #005ac2;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #313540;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #424754;
+}
+
+/* Custom animations */
+@keyframes pulse-glow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes slide-up {
+  from { transform: translateY(10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.3s ease-out;
+}
+
+/* Mono font utility */
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}

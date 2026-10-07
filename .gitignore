@@ -1,0 +1,78 @@
+# ──────────────────────────────────────────────────
+# TeknOS — Root .gitignore
+# ──────────────────────────────────────────────────
+
+# ═══ Python ═══
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+*.egg-info/
+build/
+.eggs/
+
+# Virtual environments
+sw/
+.venv/
+venv/
+env/
+
+# ═══ Model Weights (large binaries) ═══
+*.pt
+*.pth
+*.onnx
+*.torchscript
+
+# ═══ Node.js ═══
+node_modules/
+frontend/dist/
+frontend/dist-ssr/
+*.local
+
+# ═══ Generated Demo Data (runtime outputs) ═══
+teknos-main/frontend/public/demo/annotated.mp4
+teknos-main/frontend/public/demo/uploaded_input.mp4
+teknos-main/frontend/public/demo/temp_cache.json
+teknos-main/frontend/public/demo/evidence/
+
+# ═══ Dataset (academic use — do not redistribute) ═══
+Avenue_Dataset/
+Avenue_Dataset.zip
+datasets/
+
+# ═══ Uploaded user videos ═══
+teknos-main/backend/uploads/
+uploads/
+
+# ═══ Pipeline outputs ═══
+teknos-main/backend/outputs/
+outputs/
+
+# ═══ Environment / Secrets ═══
+.env
+!.env.example
+
+# ═══ IDE / OS ═══
+.vscode/
+.idea/
+*.swp
+*.swo
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+Thumbs.db
+.DS_Store
+
+# ═══ Logs ═══
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# ═══ Agents / AI tool data ═══
+.agents/
+.gemini/

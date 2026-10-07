@@ -1,0 +1,51 @@
+# ──────────────────────────────────────────────────
+# SafeWatch AI — .gitignore
+# ──────────────────────────────────────────────────
+
+# Virtual environment (never commit)
+sw/
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Model weights (large binary files, downloaded on demand)
+*.pt
+*.pth
+*.onnx
+*.torchscript
+
+# Dataset (academic use only — do not redistribute)
+Avenue_Dataset/
+Avenue_Dataset.zip
+
+# Uploaded user videos (generated at runtime)
+backend/uploads/
+
+# Pipeline outputs (generated at runtime)
+backend/outputs/
+outputs/
+
+# Environment / secrets
+.env
+
+# IDE / OS artefacts
+.vscode/
+.idea/
+*.swp
+*.swo
+Thumbs.db
+.DS_Store
+
+# Logs
+*.log
+logs/

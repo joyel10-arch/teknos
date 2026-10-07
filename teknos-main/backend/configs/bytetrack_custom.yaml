@@ -1,0 +1,22 @@
+# SafeWatch AI — Custom ByteTrack Configuration
+#
+# Why these values differ from the Ultralytics default:
+#   track_high_thresh: lowered 0.5->0.25 to detect partially occluded persons
+#                      (behind concrete columns in CUHK Avenue)
+#   track_low_thresh:  0.1 to allow re-association of low-confidence re-detections
+#                      after occlusion
+#   new_track_thresh:  0.5 to avoid creating spurious tracks for reflections/noise
+#   track_buffer:      60 frames (2 s at 30 fps) so a person hidden behind a
+#                      column for up to 2 s can be re-associated to the same ID
+#                      (default is 30 frames / 1 s which caused ID switches)
+#   match_thresh:      0.8 (default) — IoU threshold for high-confidence matching
+#   fuse_score:        True — multiplies detection confidence into the IoU score
+#                      for more robust association
+
+tracker_type: bytetrack
+track_high_thresh: 0.25    # Min conf to enter high-confidence pool  (default 0.5)
+track_low_thresh: 0.1      # Min conf for low-confidence pool         (default 0.1)
+new_track_thresh: 0.5      # Min conf to START a new track            (default 0.6)
+track_buffer: 60           # Frames to keep a lost track alive        (default 30)
+match_thresh: 0.8          # IoU threshold for matching               (default 0.8)
+fuse_score: True           # Fuse detection score into IoU score      (default True)

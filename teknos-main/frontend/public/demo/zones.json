@@ -1,0 +1,115 @@
+{
+  "scene_id": "avenue_test_01",
+  "scene_name": "Campus Avenue \u00e2\u20ac\u201d Test Clip 01",
+  "video_name": "avenue_test_01.avi",
+  "reference_resolution": [
+    640,
+    360
+  ],
+  "params": {
+    "zone_placement_note": "Zones were placed by us on this clip using the trajectory overview of 63 valid cached tracks. Reference resolution 640x360 matches the source video; no scaling needed at runtime for this clip."
+  },
+  "zones": [
+    {
+      "id": "walkway",
+      "name": "Main Walkway",
+      "type": "allowed",
+      "priority": 1,
+      "polygon": [
+        [
+          0,
+          168
+        ],
+        [
+          640,
+          168
+        ],
+        [
+          640,
+          252
+        ],
+        [
+          0,
+          252
+        ]
+      ],
+      "_justification": "Dense horizontal trajectory band (p10\u00e2\u20ac\u201cp90 of all valid track y-positions is 220\u00e2\u20ac\u201c296). 50+ valid tracks transit this strip; it is the primary pedestrian passage."
+    },
+    {
+      "id": "grass_area",
+      "name": "Grass Area",
+      "type": "monitored",
+      "priority": 2,
+      "polygon": [
+        [
+          0,
+          252
+        ],
+        [
+          360,
+          252
+        ],
+        [
+          360,
+          360
+        ],
+        [
+          0,
+          360
+        ]
+      ],
+      "_justification": "Tracks 1, 4, 5, 50, 100, 102 dip into y>252 on the left side with ymean 293\u00e2\u20ac\u201c325 and durations 10\u00e2\u20ac\u201c20 s; the sitting person with bag is visible at bottom-left in the reference frame."
+    },
+    {
+      "id": "entrance_gate",
+      "name": "Building Entrance",
+      "type": "restricted",
+      "priority": 3,
+      "polygon": [
+        [
+          530,
+          168
+        ],
+        [
+          640,
+          168
+        ],
+        [
+          640,
+          260
+        ],
+        [
+          530,
+          260
+        ]
+      ],
+      "_justification": "Dense cluster of red track-end dots at x>530 in the trajectory overview; tracks 31, 32, 132 terminate here, indicating people stopping at or passing through the entrance gate/door area."
+    },
+    {
+      "id": "pavement_lane",
+      "name": "Pavement Lane",
+      "type": "directional",
+      "allowed_direction": "left_to_right",
+      "priority": 2,
+      "polygon": [
+        [
+          0,
+          200
+        ],
+        [
+          640,
+          200
+        ],
+        [
+          640,
+          252
+        ],
+        [
+          0,
+          252
+        ]
+      ],
+      "_justification": "All but one valid track (id=7, dx=-154) have strongly positive dx. Track 7 travels right-to-left through this sub-strip of the walkway, making it the directional violation candidate."
+    }
+  ]
+}
